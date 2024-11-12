@@ -1,14 +1,16 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAbvUnGq3Aihl8NfoZg4DWnHR2C8qrWy4c",
-  authDomain: "mes-recettes1.firebaseapp.com",
-  projectId: "mes-recettes1",
-  storageBucket: "mes-recettes1.firebasestorage.app",
-  messagingSenderId: "421455743895",
-  appId: "1:421455743895:web:0a3f1ee64a8fdd6a26d2d2",
-  measurementId: "G-DM2NDYB76X"
-};
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID,
+    measurementId: import.meta.env.VITE_MEASUREMENT_ID
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
